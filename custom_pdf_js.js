@@ -197,6 +197,7 @@ class PDFViewer {
                     this.bookMarkFun({
                         'currentPage' : this.currentPage,
                         'selectionArea' : selectionDetails,
+                        'bookmarks' : this.bookmarks
                     });
                 }
             });
@@ -413,9 +414,9 @@ class PDFViewer {
         const bookmarks = this.bookmarks;
         let html = '';
         let dynamic_content = '';
-        if(!bookmarks){
+        if (!bookmarks || Object.keys(bookmarks).length === 0) {
             //if no bookmark available 
-            dynamic_content = '<tr><th colspan="3">No Bookmard available.</th></tr>';
+            dynamic_content = '<tr><th colspan="3">No Bookmark available.</th></tr>';
         }
         Object.entries(bookmarks).forEach(([key, values]) => {
             dynamic_content += `<tr> <th scope="row" colspan="3"> Page - ${key} </th>  </tr>`;

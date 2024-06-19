@@ -36,27 +36,61 @@
     }
 
     let bookmarks  = {
-        // for page 1
-        // 1: [
-        //         {
-            //         backgroundColor: "rgb(231, 8, 8)",
-            //         deleteAccess : 1,//IF ONE THEN ONLY DELETE BUTTON WILL BE DISPLAY
-            //         height : "108px",
-            //         left : "63.0057px",
-            //         notes : "Test Notes",
-            //         top : "150.384px",
-            //         width : "439px"
-            //     }
-        // ]
+        "1": [
+            {
+                "left": "61.5px",
+                "top": "285px",
+                "width": "750px",
+                "height": "165px",
+                "backgroundColor": "",
+                "notes": "Bookmark",
+                "deleteAccess": false,
+                "bookmark_at": {
+                    "date_time": "19 June 2024 4:16 PM",
+                    "time": "16:16:37",
+                    "date": "19/06/2024"
+                }
+            },
+            {
+                "left": "53.5px",
+                "top": "835px",
+                "width": "810px",
+                "height": "151px",
+                "backgroundColor": "",
+                "notes": "Bookmark -2",
+                "deleteAccess": 1,
+                "bookmark_at": {
+                    "date_time": "19 June 2024 4:17 PM",
+                    "time": "16:17:18",
+                    "date": "19/06/2024"
+                }
+            }
+        ],
+        "2": [
+            {
+                "left": "69.5px",
+                "top": "838px",
+                "width": "737px",
+                "height": "180px",
+                "backgroundColor": "",
+                "notes": "How to print pdf?",
+                "deleteAccess": 1,
+                "bookmark_at": {
+                    "date_time": "19 June 2024 4:21 PM",
+                    "time": "16:21:28",
+                    "date": "19/06/2024"
+                }
+            }
+        ]
         // get from database
     }
     
     var pdfOption = {
-        pdfUrl: 'pdf/test.pdf',//Path of your pdf
+        // pdfUrl: 'pdf/test.pdf',//Path of your pdf
         pdfUrl: 'pdf/test_pdf2.pdf',//Path of your pdf
         containerId: 'main_pdf_container',//id without #
         bookMarkCallback: bookMark ,//callback function when click on bookmark button
-        bookmarks,//Path of your pdf
+        bookmarks,//all bookmarks
     };
     pdfViewerObj = new PDFViewer(pdfOption);//ASSIGN TO GLOBAL VARIABLE
     //---------------- Usage Example ------------//
